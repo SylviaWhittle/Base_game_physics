@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=1]
+
+[node name="Shop" type="ScrollContainer"]
+margin_left = 433.0
+margin_top = 60.0
+margin_right = 591.0
+margin_bottom = 156.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node" type="Node" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Node"]
+margin_left = 435.0
+margin_top = 62.0
+margin_right = 589.0
+margin_bottom = 154.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Node/VBoxContainer"]
+margin_right = 154.0
+margin_bottom = 20.0
+text = "itemm"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,251 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Button.gd" type="Script" id=2]
+[ext_resource path="res://UI/Graph.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/MainScene.gd" type="Script" id=4]
+[ext_resource path="res://Themes/MainTheme.tres" type="Theme" id=5]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ClickCounter" type="Label" parent="."]
+margin_left = 479.0
+margin_top = 249.0
+margin_right = 519.0
+margin_bottom = 263.0
+theme = ExtResource( 5 )
+text = "there are no klicks"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 414.0
+margin_top = 321.0
+margin_right = 601.0
+margin_bottom = 391.0
+rect_rotation = -1.0
+theme = ExtResource( 5 )
+text = "clik me"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClicksPerSecondCounter" type="Label" parent="."]
+margin_left = 663.0
+margin_top = 321.0
+margin_right = 865.0
+margin_bottom = 348.0
+theme = ExtResource( 5 )
+text = "clicks per second:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CPSTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="ClickHistory" type="Label" parent="."]
+margin_left = 664.0
+margin_top = 286.0
+margin_right = 704.0
+margin_bottom = 313.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Graph" type="Panel" parent="."]
+margin_left = 91.0
+margin_top = 71.0
+margin_right = 343.0
+margin_bottom = 258.0
+rect_min_size = Vector2( 3.628, 0 )
+theme = ExtResource( 5 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="line" type="Line2D" parent="Graph"]
+points = PoolVector2Array( 120, 95 )
+width = 3.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Graph"]
+margin_left = 49.0
+margin_top = -33.0
+margin_right = 185.0
+margin_bottom = -6.0
+theme = ExtResource( 5 )
+text = "stati sticks"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Graph"]
+margin_left = 342.0
+margin_top = -8.0
+margin_right = 402.0
+margin_bottom = 19.0
+theme = ExtResource( 5 )
+text = "buton"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shop" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Shop"]
+margin_left = 50.0
+margin_top = 420.0
+margin_right = 164.0
+margin_bottom = 447.0
+theme = ExtResource( 5 )
+text = "inventorie"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Shop"]
+margin_left = 600.0
+margin_top = 58.0
+margin_right = 884.0
+margin_bottom = 160.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Shop/ScrollContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 270.0
+margin_bottom = 215.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buyer" type="Button" parent="Shop/ScrollContainer/VBoxContainer"]
+margin_right = 268.0
+margin_bottom = 27.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+text = "Clockwork Clicker : 100C"
+script = ExtResource( 2 )
+
+[node name="Clockwork Clicker Buyer2" type="Button" parent="Shop/ScrollContainer/VBoxContainer"]
+margin_top = 31.0
+margin_right = 268.0
+margin_bottom = 58.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+text = "Clockwork Clicker : 100C"
+script = ExtResource( 2 )
+
+[node name="Clockwork Clicker Buyer3" type="Button" parent="Shop/ScrollContainer/VBoxContainer"]
+margin_top = 62.0
+margin_right = 268.0
+margin_bottom = 89.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+text = "Clockwork Clicker : 100C"
+script = ExtResource( 2 )
+
+[node name="Clockwork Clicker Buyer4" type="Button" parent="Shop/ScrollContainer/VBoxContainer"]
+margin_top = 93.0
+margin_right = 268.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+text = "Clockwork Clicker : 100C"
+script = ExtResource( 2 )
+
+[node name="Clockwork Clicker Buyer5" type="Button" parent="Shop/ScrollContainer/VBoxContainer"]
+margin_top = 124.0
+margin_right = 268.0
+margin_bottom = 151.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+text = "Clockwork Clicker : 100C"
+script = ExtResource( 2 )
+
+[node name="Clockwork Clicker Buyer6" type="Button" parent="Shop/ScrollContainer/VBoxContainer"]
+margin_top = 155.0
+margin_right = 268.0
+margin_bottom = 182.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+text = "Clockwork Clicker : 100C"
+script = ExtResource( 2 )
+
+[node name="Clockwork Clicker Buyer7" type="Button" parent="Shop/ScrollContainer/VBoxContainer"]
+margin_top = 186.0
+margin_right = 268.0
+margin_bottom = 213.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+text = "Clockwork Clicker : 100C"
+script = ExtResource( 2 )
+
+[node name="Inventory" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Inventory"]
+margin_left = 601.0
+margin_top = 25.0
+margin_right = 715.0
+margin_bottom = 52.0
+theme = ExtResource( 5 )
+text = "shope"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Inventory"]
+margin_left = 50.0
+margin_top = 455.0
+margin_right = 403.0
+margin_bottom = 590.0
+rect_rotation = 1.0
+size_flags_horizontal = 3
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Inventory/ScrollContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 351.0
+margin_bottom = 133.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="timeout" from="CPSTimer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="Shop/ScrollContainer/VBoxContainer/Buyer" to="Shop/ScrollContainer/VBoxContainer/Buyer" method="_on_Button_pressed"]
+[connection signal="pressed" from="Shop/ScrollContainer/VBoxContainer/Clockwork Clicker Buyer2" to="Shop/ScrollContainer/VBoxContainer/Clockwork Clicker Buyer2" method="_on_Button_pressed"]
+[connection signal="pressed" from="Shop/ScrollContainer/VBoxContainer/Clockwork Clicker Buyer3" to="Shop/ScrollContainer/VBoxContainer/Clockwork Clicker Buyer3" method="_on_Button_pressed"]
+[connection signal="pressed" from="Shop/ScrollContainer/VBoxContainer/Clockwork Clicker Buyer4" to="Shop/ScrollContainer/VBoxContainer/Clockwork Clicker Buyer4" method="_on_Button_pressed"]
+[connection signal="pressed" from="Shop/ScrollContainer/VBoxContainer/Clockwork Clicker Buyer5" to="Shop/ScrollContainer/VBoxContainer/Clockwork Clicker Buyer5" method="_on_Button_pressed"]
+[connection signal="pressed" from="Shop/ScrollContainer/VBoxContainer/Clockwork Clicker Buyer6" to="Shop/ScrollContainer/VBoxContainer/Clockwork Clicker Buyer6" method="_on_Button_pressed"]
+[connection signal="pressed" from="Shop/ScrollContainer/VBoxContainer/Clockwork Clicker Buyer7" to="Shop/ScrollContainer/VBoxContainer/Clockwork Clicker Buyer7" method="_on_Button_pressed"]
